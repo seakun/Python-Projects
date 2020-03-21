@@ -15,7 +15,6 @@ print("My name is John")
 
 
 '''
- Code Challenge — Write a program
 
 The title of Alice's Adventures in Wonderland is often shortened to Alice in Wonderland.
 
@@ -24,7 +23,6 @@ Now, when we know how to print strings with quotes, we won't shorten it. Please 
 print("Alice's Adventures in Wonderland ")
 
 '''
- Code Challenge — Write a program
 
 Write a program that prints the following line.
 
@@ -33,7 +31,6 @@ Write a program that prints the following line.
 print("2 + 2 = 4")
 
 '''
- Code Challenge — Write a program
 
 Write a program that prints out a string We learn Python!
 
@@ -44,7 +41,6 @@ print("We learn Python!")
 #  Python → Introduction to Python → Multi-line programs 
 
 '''
- Code Challenge — Write a program
 Write a program that prints the following three text lines in the column.
 
 first
@@ -56,7 +52,6 @@ print("second")
 print("third")
 
 '''
- Code Challenge — Write a program
 
 You need to write a program to display the result grid of a game in Tic-Tac-Toe.
 
@@ -73,7 +68,6 @@ print("O X O")
 print("X O X")
 
 '''
- Code Challenge — Write a program
 
 Write a program that prints this square out of * symbols.
 
@@ -90,7 +84,6 @@ print("*     *")
 print("* * * *")
 
 '''
- Code Challenge — Write a program
 
 Write a program that prints the following text:
 
@@ -110,7 +103,6 @@ print("AS QUICKLY AS POSSIBLE")
 
 # Python → Code style → Comments
 '''
- Code Challenge — Write a program
 
 There are several comments "hidden" in the code below. Find them and make sure to comment them so that the code runs correctly.
 '''
@@ -131,7 +123,6 @@ word = word.replace("\u0301", "")  # delete stress symbols from the word
 
 
 '''
- Code Challenge — Write a program
 
 It is sometimes useful to comment out some parts of a program if you don't need them now and want to save them for later. Look at the following code, copy it to the test and decide what line to comment out so that the code will print an integer 7.
 
@@ -144,7 +135,6 @@ print(1 + 3 + 3)
 # print(1 + 2 + 3)
 
 '''
- Code Challenge — Write a program
 
 Write the code that corresponds to the comment.
 '''
@@ -154,7 +144,6 @@ print("ok")
 #  Python → Data types and operations → Basic data types 
 
 '''
- Code Challenge — Write a program
 
 Print an int with a value 10.
 
@@ -167,14 +156,12 @@ Sample Output 1:
 print(10)
 
 '''
- Code Challenge — Write a program
 
 Print the numbers from 1 to 10 in a single line: 1 2 3 4 5 6 7 8 9 10.
 '''
 print("1 2 3 4 5 6 7 8 9 10")
 
 '''
- Code Challenge — Write a program
 
 Write the code that prints the type of 3 objects that are written below (in this exact order).
 
@@ -187,14 +174,12 @@ print(type(394))
 print(type(2.71))
 
 '''
- Code Challenge — Write a program
 
 Try to print a float number 1.0000000000000001.
 '''
 print(1.0000000000000001)
 
 '''
- Code Challenge — Write a program
 
 Print a string Supercalifragilisticexpialidocious below.
 '''
@@ -203,14 +188,12 @@ print("Supercalifragilisticexpialidocious")
 #  Python → Data types and operations → Variables 
 
 '''
- Code Challenge — Write a program
 
 Define a numeric variable with name number and value 10.
 '''
 number = 10
 
 '''
- Code Challenge — Write a program
 
 Create a variable favorite_holiday with a value "Cinnamon Roll Day"
 '''
@@ -219,7 +202,6 @@ favorite_holiday = "Cinnamon Roll Day"
 #  Python → Simple programs → Taking input 
 
 '''
- Code Challenge — Write a program
 
 Let's see how it works. Copy the following code and paste it below. Then change one of the lines so that the program would print any data the user inputs without performing any operations on them. 
 
@@ -239,7 +221,6 @@ data = input()
 print(data)
 
 '''
- Code Challenge — Write a program
 
 Write a program that prints the sum of three integer numbers. Read each number from the user separately.
 
@@ -260,7 +241,6 @@ num3 = int(input())
 print(num1 + num2 + num3)
 
 '''
- Code Challenge — Write a program
 
 Imagine you are writing a program that will give a prediction for users. And imagine you intend to do so based on a number they enter. Write a program that reads a three-digit number and prints the sum of its digits.
 
@@ -281,7 +261,6 @@ number = input()
 print(int(number[0]) + int(number[1]) + int(number[2]))
 
 '''
- Code Challenge — Write a program
 
 Ask the user about parameters of a rectangular parallelepiped (3 integers representing the length, width and height) and print the sum of edge lengths, its total surface area and volume.
 
@@ -320,7 +299,6 @@ print(2 * (length * width + width * height + length * height))
 print(length * width * height)
 
 '''
- Code Challenge — Write a program
 
 Write a program that reads the input from the user and then prints "Hello, " + user input. Don't print any additional messages!
 
@@ -336,7 +314,6 @@ name = input()
 print("Hello, " + name)
 
 '''
- Code Challenge — Write a program
 
 Write a program that reads two integer numbers from user and then prints their difference.
 
@@ -354,7 +331,6 @@ num2 = int(input())
 print(num1 - num2)
 
 '''
- Code Challenge — Write a program
 
 Write a program that reads two float numbers from the user (use the float()) and prints their sum.
 
@@ -372,7 +348,6 @@ num2 = float(input())
 print(num1 + num2)
 
 '''
- Code Challenge — Write a program
 
 Have you ever dreamed of becoming a songwriter? It's time to make a hit. We will leave a verse for later and write the chorus part instead.
 
@@ -394,7 +369,6 @@ print(int(input()) * input())
 #  Python → Data types and operations → Integer arithmetic
 
 '''
- Code Challenge — Write a program
 
 Write a program that calculates a remainder of 10 divided by 3 and prints the result
 '''
@@ -402,14 +376,12 @@ Write a program that calculates a remainder of 10 divided by 3 and prints the re
 print(10 % 3)
 
 '''
- Code Challenge — Write a program
 
 Please, print() the result of the following operations: first raise 31 into the power of 331; get the remainder of the result's division by 20.
 '''
 print((31 ** 331) % 20)
 
 '''
- Code Challenge — Write a program
 
 Print the result of execution of the following expression 1234567890 multiplied by 987654321 then add 67890
 '''
@@ -417,14 +389,12 @@ Print the result of execution of the following expression 1234567890 multiplied 
 print(1234567890 * 987654321 + 67890)
 
 '''
- Code Challenge — Write a program
 
 Write a program that prints the product of these three numbers 1 * 2 * 3.
 '''
 print(1 * 2 * 3)
 
 '''
- Code Challenge — Write a program
 
 Write a program that takes two integer numbers a and b and prints their sum.
 
@@ -446,7 +416,6 @@ b = int(input())
 print(a + b)
 
 '''
- Code Challenge — Write a program
 
 Write a program that takes 3 integer numbers a, b and c, subtracts c from a multiplied by b and then prints the result.
 
@@ -470,7 +439,6 @@ c = int(input())
 print(a * b - c)
 
 '''
- Code Challenge — Write a program
 
 Write a program that takes a single integer number n and then performs the following operations in the following order:
 
@@ -501,7 +469,6 @@ n = int(input())
 print((((n + n) * n) - n) // n)
 
 '''
- Code Challenge — Write a program
 
 It's time for really big numbers! Calculate this 2^{179} and print what you got.
 '''
@@ -1619,5 +1586,106 @@ if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
     print("Leap")
 else:
     print("Ordinary")
+
+
+#  Python → Data types and operations → Quotes and multi-line strings 
+
+'''
+Quotes and multi-line strings → Taking turns
+
+Write a program that will print the following multi-line string:
+
+' '' '''
+' '' '''
+' '' '''
+'''
+
+print("' '' '''")
+print("' '' '''")
+print("' '' '''")
+
+'''
+Quotes and multi-line strings → Poetry 
+
+Write a program that will create and print this string from "How The Grinch Stole Christmas":
+
+Did that stop the old Grinch?
+No! The Grinch simply said,
+"If I can't find a reindeer,
+I'll make one instead!"
+'''
+
+print("Did that stop the old Grinch?")
+print("No! The Grinch simply said,")
+print("\"If I can't find a reindeer,")
+print("I'll make one instead!\"")
+
+'''
+Quotes and multi-line strings → Possessive case 
+
+Make a phrase with a possessive noun out of two strings and print it, for example, the phrase philosopher's stone given the strings philosopher and stone.
+'''
+
+word1 = "King"
+word2 = "Cross"
+# add the correct string instead of the dots
+print(word1 + "\'s " + word2)
+
+'''
+Quotes and multi-line strings → Triple-quoted string 
+
+Create a program that will print this multi-line string containing triple double quotes:
+
+"""
+THIS IS A STRING
+"""
+'''
+
+print("\"\"\"")
+print("THIS IS A STRING")
+print("\"\"\"")
+
+'''
+Quotes and multi-line strings → A pyramid! 
+
+Write a program that prints a 4-line string, containing:
+
+    at the first line – one single quote
+    at the second line – two single quotes with one double quote inside
+    at the third line – five alternating single and double quotes, starting with a single quote
+    at the fourth line – seven alternating single and double quotes, starting with a single quote
+
+So, the output should look like this:
+
+'
+'"'
+'"'"'
+'"'"'"'
+'''
+
+print("'")
+print("'\"'")
+print("\'\"\'\"\'")
+print("\'\"\'\"\'\"\'")
+
+'''
+
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
