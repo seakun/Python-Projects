@@ -2,6 +2,9 @@
  sample Python Projects
 
 * Simple Chatty Bot
-	* Learning over the basic syntax of Python and writing a simple program using variables, conditions, loops, and functions.
+	* Learned Python basic syntax and writing a simple program using variables, conditions, loops, and functions.
 
 * Zookeeper
+ * Learned to use lists and access them with indexes.
+
+ 

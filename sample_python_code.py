@@ -1668,23 +1668,159 @@ print("'\"'")
 print("\'\"\'\"\'")
 print("\'\"\'\"\'\"\'")
 
-'''
+#  Python → Collections → List 
 
 '''
+List → An empty list! 
+Write a program that will create and print an empty list.
+'''
+empty_list = []
+print(empty_list)
+
+'''
+List → Single-element list 
+Helen wants to create a list containing only one element – a string with her name. To do this, she wrote this line of code:
+
+name = list('Helen')
+
+However, when she prints the list, her name appears broken into several one-letter strings:
+
+print(name)
+# ['H', 'e', 'l', 'e', 'n']
+'''
+name = ['Helen']
+print(name)
+
+'''
+List → Reveal the hidden 
+There's a predefined variable hidden that contains a list. Count the number of elements in this list and print it.
+'''
+# use the variable "hidden", it is already defined
+print(len(hidden))
+
+'''
+List → List from string 
+Write a program that constructs a list from the given string's symbols and then prints it.
+
+The variable string has been defined for you.
+
+Sample Input 1:
+
+python
+
+Sample Output 1:
+
+['p', 'y', 't', 'h', 'o', 'n']
+
+Sample Input 2:
+
+John
+
+Sample Output 2:
+
+['J', 'o', 'h', 'n']
+'''
+# work with this variable
+string = input()
+print(list(string))
 
 
+#  Python → Collections → Indexes 
 
+'''
+Indexes → Tail 
+Sentences generally end with a certain punctuation mark: a period ., an exclamation point !, or a question mark ?.
 
+Find out which of these symbols marks the end of a string stored in the variable sentence and print it out.
 
+Sample Input 1:
 
+What a lovely day!
 
+Sample Output 1:
 
+!
+'''
+sentence = input()
+# print the last symbol below
+print(sentence[len(sentence) - 1])
 
+'''
+Indexes → Initials 
+Find the initial letter of a person's name and print it out.
 
+Make use of the variable name that stores a string.
 
+Sample Input 1:
 
+Kate
 
+Sample Output 1:
 
+K
+
+Sample Input 2:
+
+Ivor
+
+Sample Output 2:
+
+I
+'''
+name = input()
+# print the initial letter
+print(name[0])
+
+'''
+Indexes → Find the third number 
+The list prices contains several numbers. Print the third number from this list.
+
+You don't have to handle the input.
+
+Sample Input 1:
+
+[5230, 5661, 5081, 9539, 5563]
+
+Sample Output 1:
+
+5081
+'''
+# work with the list 'prices' here
+print(prices[2])
+
+'''
+Indexes → Latin alphabet 
+We have created a variable for the lowercase English alphabet:
+
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+Your task is to print the 15th letter of this string.
+'''
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+# put your python code here
+print(alphabet[14])
+
+'''
+Indexes → Update a list 
+Modify the list numbers so that each number in it coincides with its index (not the negative one).
+
+In the end, print the list.
+'''
+numbers = [4, 1, 0, 3, 2, 5]
+# put your python code here
+numbers = [0, 1, 2, 3, 4, 5]
+print(numbers)
+
+'''
+Indexes → Modifying data 
+Lists, unlike strings, are mutable. We can use that to modify their data with indexes.
+
+There is a list planets with the names of the Solar system planets. However, instead of the 5th planet, there's an X. Reassign it to the real name of the 5th planet.
+
+Note that the list planets has already been defined, you just need to change one element.
+'''
+# change the name of the 5th planet in planets
+planets[4] = "Jupiter"
 
 
 
