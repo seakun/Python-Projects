@@ -1822,6 +1822,754 @@ Note that the list planets has already been defined, you just need to change one
 # change the name of the 5th planet in planets
 planets[4] = "Jupiter"
 
+#  Python → Control flow statements → Elif statement 
+
+'''
+Elif statement → Menu 
+Let's say you were asked to create a program for a restaurant: a visitor enters what kind of food they would like to order and gets back the restaurant's offer.
+
+The restaurant has just opened so its menu contains only a few options:
+
+    pizza: Margarita, Four Seasons, Neapoletana, Vegetarian, Spicy
+    salad: Caesar salad, Green salad, Tuna salad, Fruit salad
+    soup: Chicken soup, Ramen, Tomato soup, Mushroom cream soup
+
+If the visitors asks for something that is not in the menu, the program should write "Sorry, we don't have it in the menu".
+
+Input: "pizza"
+Output: "Margarita, Four Seasons, Neapoletana, Vegetarian, Spicy"
+
+Input: "burger"
+Output: "Sorry, we don't have it in the menu"
+
+Sample Input 1:
+
+pizza
+
+Sample Output 1:
+
+Margarita, Four Seasons, Neapoletana, Vegetarian, Spicy
+
+'''
+food = input()
+if food == "pizza":
+    print("Margarita, Four Seasons, Neapoletana, Vegetarian, Spicy")
+elif food == "salad":
+    print("Caesar salad, Green salad, Tuna salad, Fruit salad")
+elif food == "soup":
+    print("Chicken soup, Ramen, Tomato soup, Mushroom cream soup")
+else:
+    print("Sorry, we don't have it in the menu")
+    
+'''
+Elif statement → What day is it? 
+
+Today the whole world uses the Coordinated Universal Time (UTC) to distinguish between the time zones. The UTC is considered to be the 0, and the rest of the time zones are expressed using positive or negative offsets from the UTC. For instance, London is in the zone UTC+00:00 (or GMT) and Moscow is in the zone UTC+3:00. 
+
+There are 14 positive offsets (from UTC+1:00 to UTC+14:00) and 12 negative offsets (from UTC-12:00 to UTC-1:00). This also means that at a particular hour, three calendar days are observed on the planet.
+
+Imagine, it is 10:30 on a Tuesday in London (UTC). What day of the week is it in a specific timezone?
+
+The input format:
+
+The value of offset with the sign (e.g. +3 or -9).
+
+The output format:
+
+The day of the week in that timezone. 
+
+Sample Input 1:
+
+0
+
+Sample Output 1:
+
+Tuesday
+
+Sample Input 2:
+
+-11
+
+Sample Output 2:
+
+Monday
+'''
+offset = input()
+if offset == "0":
+    print("Tuesday")
+elif len(offset) == 2:
+    print("Tuesday")
+else:
+    if offset[0] == "-" and int(str(offset[1]) + str(offset[2])) > 10:
+        print("Monday")
+    elif offset[0] == "+" and int(str(offset[1]) + str(offset[2])) == 14:
+        print("Wednesday")
+    else:
+        print("Tuesday")
+
+'''
+Elif statement → Computer hours 
+
+Write a program that asks a user how long, on average, they spend on a computer per day and:
+
+if it is less than 2 hours says 'That seems reasonable'
+else if it is less than 4 hours per day says 'Do you have time for anything else?'
+else the programs says 'You need to get outside more!'
+
+Sample Input 1:
+
+6
+
+Sample Output 1:
+
+You need to get outside more!
+'''
+# Make sure your output matches the assignment *exactly*
+computer_hours = int(input())
+if computer_hours < 2:
+    print("That seems reasonable")
+elif computer_hours < 4:
+    print("Do you have time for anything else?")
+else:
+    print("You need to get outside more!")
+
+'''
+Elif statement → Calculator 
+
+Let's write a simple calculator!
+
+It will read 3 lines:
+
+    the first number
+    the second number
+    the arithmetic operation.
+
+Numbers are floats!
+
+The output is the result of the following: first_number operation second_number.
+
+Operations are: +, -, /, *, mod, pow, div.
+mod — modulo operation, i.e. the remainder of the division first_numer % second_number,
+pow — exponentiation, the first number will be the base and the second — the power: first_number ** second_number,
+div — integer division first_number // second_number.
+
+Note that if the second number is 0 and you want to perform any of the operations /, mod, or div, the calculator should say "Division by 0!"
+
+Sample Input 1:
+
+5.0
+0.0
+mod
+
+Sample Output 1:
+
+Division by 0!
+
+Sample Input 2:
+
+-12.0
+-8.0
+*
+
+Sample Output 2:
+
+96.0
+
+Sample Input 3:
+
+5.0
+10.0
+/
+
+Sample Output 3:
+
+0.5
+'''
+# put your python code here
+n1 = float(input())
+n2 = float(input())
+op = input()
+# +, -, /, *, mod, pow, div.
+if op == "+":
+    print(n1 + n2)
+elif op == "-":
+    print(n1 - n2)
+elif op == "/":
+    if int(n2) == 0:
+        print("Division by 0!")
+    else:
+        print(n1 / n2)
+elif op == "*":
+    print(n1 * n2)
+elif op == "mod":
+    if int(n2) == 0:
+        print("Division by 0!")
+    else:
+        print(n1 % n2)
+elif op == "pow":
+    print(n1 ** n2)
+else:
+    if int(n2) == 0:
+        print("Division by 0!")
+    else:
+        print(n1 // n2)
+
+'''
+Elif statement → Particles 
+The world of elementary particles is rather complex. There are many different classes and they can interact in a rather interesting way.
+
+Two important characteristics of the elementary particles are the spin and the electric charge. Here are some of the elementary particles:
+Particle    Class   Spin    Electric charge
+Strange     Quark   1/2     -1/3
+Charm   Quark   1/2     2/3
+Electron    Lepton  1/2     -1
+Muon    Lepton  1/2     0
+Photon  Boson   1   0
+Higgs boson     Boson   0   0
+
+Write a program that returns the particle and its class based on its spin and electric charge.
+
+The input format:
+
+Two lines: first the spin of the particle, then its charge.
+
+The output format:
+
+The particle and its class separated by a space.
+
+Sample Input 1:
+
+1/2
+-1/3
+
+Sample Output 1:
+
+Strange Quark
+'''
+spin = input()
+charge = input()
+if spin == "1/2":
+    if charge == "-1/3":
+        print("Strange Quark")
+    elif charge == "2/3":
+        print("Charm Quark") 
+    elif charge == "-1":
+        print("Electron Lepton")
+    else:
+        print("Muon Lepton")
+elif spin == "1":
+    print("Photon Boson")
+else:
+    print("Higgs boson Boson")
+
+
+'''
+Elif statement → Grade 
+There is a number of grades you can get in a test: A, B, C, D, F. The percentages are the following:
+
+A: 90-100%
+
+B: 80-90%
+
+C: 70-80%
+
+D: 60-70%
+
+F: <60%
+
+Determine the grade that a student will get based on the student's score and the maximum score.
+
+Note that the upper limit is not included in the range, except for the A grade. For example, a student with 60% will get D, with 70% or 79.9% — C, but the top score 100% is just A.
+
+The input format:
+
+Two lines: the first with a student's score and the second with the maximum.
+
+The output format:
+
+The grade of the student.
+
+Sample Input 1:
+
+75
+100
+
+Sample Output 1:
+
+C
+
+Sample Input 2:
+
+100
+200
+
+Sample Output 2:
+
+F
+'''
+student_score = int(input())
+max_score = int(input())
+
+if (student_score / max_score) * 100 >= 90:
+    print("A")
+elif (student_score / max_score) * 100 >= 80 and (student_score / max_score) * 100 < 90:
+    print("B")
+elif (student_score / max_score) * 100 >= 70 and (student_score / max_score) * 100 < 80:
+    print("C")
+elif (student_score / max_score) * 100 >= 60 and (student_score / max_score) * 100 < 70:
+    print("D")
+else:
+    print("F")
+
+'''
+Elif statement → Index of synthesis 
+
+One way to classify the languages of the world is by looking at their morphological systems. One classification is based on the index of synthesis that reflects an average number of morphemes in a word. The values vary between 1 and 4 and there are 3 types of languages according to that system. Here are they:
+
+Type — Index
+
+Analytic — less than 2
+
+Synthetic — from 2 to 3
+
+Polysynthetic — more than 3
+
+Write a program that given the index of synthesis determines the type of the language.
+
+The input format:
+
+The value of the index of synthesis.
+
+The output format:
+
+The type of language.
+
+Sample Input 1:
+
+2.35
+
+Sample Output 1:
+
+Synthetic
+
+Sample Input 2:
+
+1.68
+
+Sample Output 2:
+
+Analytic
+'''
+value = float(input())
+if value < 2:
+    print("Analytic")
+elif 2 <= value <= 3:
+    print("Synthetic")
+else:
+    print("Polysynthetic")
+
+'''
+Elif statement → The farm 
+
+In a farming game, you can buy certain animals for a specific price. As a player, you want to buy the most useful (i.e. the most expensive) animal. Here are the animals and their prices:
+
+Item: Price
+
+Chicken: 23
+
+Goat: 678
+
+Pig: 1296
+
+Cow: 3848
+
+Sheep: 6769
+
+Write a program that determines what is the most expensive animal that the user can buy with their money and how many of them they can buy.
+
+The input format:
+
+The money that the user has.
+
+The output format:
+
+How many animals the user can afford, for example, 20 chickens or 4 cows. If the user cannot afford any animal, write None. 
+
+Pay attention to the number of nouns. Also, keep in mind that the word "sheep" has the irregular plural form "sheep".
+
+Sample Input 1:
+
+25
+
+Sample Output 1:
+
+1 chicken
+
+Sample Input 2:
+
+8
+
+Sample Output 2:
+
+None
+
+Sample Input 3:
+
+668
+
+Sample Output 3:
+
+29 chickens
+'''
+money = int(input())
+count = 0
+if money < 23:
+    print("None")
+elif 23 <= money < 678:
+    count = money // 23
+    if count == 1:
+        print("1 chicken")
+    else:
+        print(str(count) + " chickens")
+elif 678 <= money < 1296:
+    count = money // 678
+    if count == 1:
+        print("1 goat")
+    else:
+        print(str(count) + " goats")
+elif 1296 <= money < 3848:
+    count = money // 1296
+    if count == 1:
+        print("1 pig")
+    else:
+        print(str(count) + " pigs")
+elif 3848 <= money < 6769:
+    count = money // 3848
+    if count == 1:
+        print("1 cow")
+    else:
+        print(str(count) + " cows")
+else:
+    count = money // 6769
+    print(str(count) + " sheep")
+
+'''
+Elif statement → The army of units
+In a computer game, each gamer has an army of units.
+
+Write a program that will classify the army of your enemies corresponding to the following rules:
+
+ 
+
+Units:  Category
+
+less than 1: no army
+
+from 1 to 9: few
+
+from 10 to 49: pack
+
+from 50 to 499: horde
+
+from 500 to 999: swarm
+
+1000 and more: legion
+
+ 
+
+The program should read the number of units and output the corresponding category.
+
+Sample Input 1:
+
+18
+
+Sample Output 1:
+
+pack
+
+Sample Input 2:
+
+5
+
+Sample Output 2:
+
+few
+'''
+units = int(input())
+if units < 1:
+    print("no army")
+elif 1 <= units <= 9:
+    print("few")
+elif 10 <= units <= 49:
+    print("pack")
+elif 50 <= units <= 499:
+    print("horde")
+elif 500 <= units <= 999:
+    print("swarm")
+else:
+    print("legion")
+
+'''
+Elif statement → Healthy sleep 
+
+Ann watched a TV program about health and learned that it is recommended to sleep at least AA hours per day, but oversleeping is also not healthy and you should not sleep more than BB hours. Now, Ann sleeps HH hours per day.
+
+If Ann's sleep schedule complies with the requirements of that TV program, print "Normal". If Ann sleeps less than AA hours, output "Deficiency", if she sleeps more than BB hours, output "Excess".
+
+The input comprises three strings with variables in the following order: A A A, B B B, H H H.
+
+A A A is always less than or equal to B B B.
+
+Sample Input 1:
+
+6
+10
+8
+
+Sample Output 1:
+
+Normal
+
+Sample Input 2:
+
+7
+9
+10
+
+Sample Output 2:
+
+Excess
+
+Sample Input 3:
+
+7
+9
+2
+
+Sample Output 3:
+
+Deficiency
+'''
+# put your python code here
+
+input_a = int(input())
+input_b = int(input())
+input_h = int(input())
+
+if input_h < input_a:
+    print("Deficiency")
+elif input_h > input_b:
+    print("Excess")
+else:
+    print("Normal")
+
+'''
+Elif statement → Positive, Negative or Zero 
+
+Write a program that reads an integer number and prints:
+
+    "negative" if the number is less than 0;
+    "positive" if the number is greater than 0;
+    "zero" if the number equals 0.
+
+Do not output double quotes.
+
+Sample Input 1:
+
+-5
+
+Sample Output 1:
+
+negative
+
+'''
+# put your python code here
+num = int(input())
+if num < 0:
+    print("negative")
+elif num > 0:
+    print("positive")
+else:
+    print("zero")
+
+'''
+Elif statement → Recommender system 
+
+Write a program that recommends one of the following movies based on the age of a user:
+
+<=16<= 16<=16 "Lion King"
+
+17−2517 - 2517−25 "Trainspotting"
+
+26−4026 - 4026−40 "Matrix"
+
+41−6041 - 6041−60 "Pulp Fiction"
+
+>60> 60>60 "Breakfast at Tiffany's"
+
+The user enters their age and the program outputs one title.
+
+Sample Input 1:
+
+19
+
+Sample Output 1:
+
+Trainspotting
+
+Sample Input 2:
+
+71
+
+Sample Output 2:
+
+Breakfast at Tiffany's
+'''
+age = int(input())
+if age <= 16:
+    print("Lion King")
+elif 17 <= age <= 25:
+    print("Trainspotting")
+elif 26 <= age <= 40:
+    print("Matrix")
+elif 41 <= age <= 60:
+    print("Pulp Fiction")
+else:
+    print("Breakfast at Tiffany's")
+
+'''
+Locate a point on the Cartesian coordinate plane: which of four quadrants does a point belong to?
+
+Read two numbers from the input, not necessarily integers, the first number will indicate a position on the X-axis, the second one — on the Y-axis. Let's keep referring to the quadrants by Roman numerals, as shown in the picture.
+
+The points lying on the axes, with either x = 0 or y = 0, and the origin (0, 0) will not appear in the tests.
+
+Sample Input 1:
+
+3.987
+-10
+
+Sample Output 1:
+
+IV
+'''
+
+x = float(input())
+y = float(input())
+
+if x > 0 and y > 0:
+    print("I")
+elif x < 0 and y > 0:
+    print("II")
+elif x < 0 and y < 0:
+    print("III")
+else:
+    print("IV")
+
+'''
+Elif statement → Long live the king 
+
+Figure out how many moves a chess king can make from a square with given coordinates. The coordinates are numbers between 1 and 8 inclusively. The first number indicates a column, the second one indicates a row.
+
+The king moves one square in any direction (horizontally, vertically, or diagonally). Other rules, as well as special moves, are not taken into account.
+
+Sample Input 1:
+
+3
+2
+
+Sample Output 1:
+
+8
+'''
+column = int(input())
+row = int(input())
+
+if column == 1:
+    if row in (1, 8):
+        print(3)
+    else:
+        print(5)
+elif column == 8:
+    if row in (1, 8):
+        print(3)
+    else:
+        print(5)
+elif 1 < column < 8:
+    if row in (1, 8):
+        print(5)
+    else:
+        print(8)
+else:
+    print(8)
+
+#  Python → Collections → Tuple 
+
+'''
+Tuple → The last number 
+
+Given a tuple consisting of numbers, print its last element.
+
+Sample Input 1:
+
+24 22 42
+
+Sample Output 1:
+
+42
+'''
+# use this tuple
+numbers = tuple(int(n) for n in input().split())
+print(numbers[len(numbers) - 1])
+
+'''
+Tuple → Oceans 
+
+Turn a list oceans into a tuple to prevent further data change.
+
+You are NOT supposed to create a new variable for the tuple or print anything.
+'''
 
 
 
+'''
+Tuple → Alphabet 
+
+Suppose we have a string with some alphabet and we want to store all the letters from it in a tuple. Read the input string and print this tuple.
+
+Sample Input 1:
+
+abcdefghijklmnopqrstuvwxyz
+
+Sample Output 1:
+
+('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+'''
+# work with this string
+alphabet = input()
+print(tuple(alphabet))
+
+'''
+Tuple → A single-element tuple 
+
+Alice tried to define a singleton tuple with the first and only item [0, 1, 1, 2, 3, 5, 8, 13, 21]. Alas, one small detail is missing here. Fix the code Alice wrote.
+
+You are NOT supposed to create a new variable for the tuple or print anything.
+'''
+# fix the code below
+singleton = ([0, 1, 1, 2, 3, 5, 8, 13, 21],)
+
+'''
+Tuple → Name 
+
+From the input, you get the first and the last name of a person. Create a tuple with the full name: the first element should be the first name and the second element should be the last name. Save the resulting tuple to the variable full_name. Do NOT print anything!
+
+The variables first_name and last_name have already been read from input.
+
+Example. Suppose, first_name is "John" and last_name is "Doe". The resulting tuple should be ("John", "Doe")
+'''
+first_name = input()
+last_name = input()
+
+# create full_name here
+full_name = (first_name, last_name)
