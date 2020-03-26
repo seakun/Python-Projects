@@ -2573,3 +2573,951 @@ last_name = input()
 
 # create full_name here
 full_name = (first_name, last_name)
+
+#  Python → Functions → Arguments  
+
+'''
+Arguments → URL 
+
+Declare a function called create_url(). It should take two arguments host and port and return URL in the format "https://{host}:{port}".
+
+Set default values for both parameters: a string "localhost" and an integer 443 respectively. Called without arguments, the function would return "https://localhost:443".
+'''
+def create_url(host="localhost", port=443):
+    return "https://" + str(host) + ":" + str(port)
+
+'''
+Arguments → Favorable default 
+
+Write a short function code that will print out this message:
+
+We code in {language}
+
+Set "Python" as a default value to the language parameter.
+'''
+def code(language="Python"):
+    print("We code in", language)
+
+'''
+Arguments → Call me by my name 
+
+There is a function called add_book() that takes a non-empty string containing the title of a book to add it to recommendations. Share your favorite book with us by calling this function. Importantly, specify the keyword argument title in the call. Otherwise, you may get an error.
+'''
+add_book(title="Stuff")
+
+'''
+Arguments → Misfortune 
+
+Robin has declared a function that prints the squares of odd numbers in the specified range. Unfortunately, several function calls gave an unexpected result. The function itself seems to be fine. Help Robin figure out what went wrong in these calls and fix them.
+
+For each case, the required range is written in a comment.
+'''
+def square_odds(a, b):
+    start = a
+    if a % 2 == 0:
+        start += 1
+    end = b + 1
+    for odd in range(start, end, 2):
+        print(odd ** 2)
+
+
+# from 22 to 42
+square_odds(22, 42)
+
+# from 15 to 31
+square_odds(15, 31)
+
+# from 42 to 49
+square_odds(42, 49)
+
+
+'''
+Arguments → Warm welcome
+
+Morgan founded a company that sends satellites into the orbit to observe Earth from space. To headhunt the best aerospace engineers, Morgan decided to pay a welcome bonus equal to 35% of the base salary. However, the bonus may be even higher for a particular candidate.
+
+Declare a function get_bonus() below that would calculate this bonus. It should take two arguments, salary and percentage, with a default value 35 for the last one. Return only the integer part of the bonus.
+'''
+def get_bonus(salary, percentage=35):
+    bonus = (salary * percentage) / 100
+    return int(bonus)
+
+#  Python → Collections → Operations with list 
+
+'''
+Write a program that takes n numbers as input, creates a list from them and then prints it.
+
+The first input line is n – length of the resulting list. It is followed by n lines containing list elements.
+
+Sample Input 1:
+
+5
+100
+-1
+72
+0
+0
+
+Sample Output 1:
+
+[100, -1, 72, 0, 0]
+'''
+n = int(input())
+input_list = []
+for i in range(n):
+    input_list.append(int(input()))
+print(input_list)
+
+'''
+Operations with list → Changed beyond recognition 
+Dany created this list:
+
+dragons = ['Rudror', 'Targiss', 'Coporth']
+
+and then played with it for some time. She used some operations on it, so the result looks like this:
+
+['Coporth', -10, 'Rudror', 'Targiss']
+
+Now Dany is confused and wants to understand what she has done exactly. Help her out! Place the operations in the correct order (the order in which they were used, from the first to the last).
+
+Let’s find out what was the last operation Dany did. Sorting can’t be the last operation, since a list containing both numbers and strings can’t be sorted, and inserting -10 to the position 2 can’t be the last operation, because in the resulting list -10 is at the position 1, not the position 2. So, dragons.reverse() was the last operation. From the remaining two, obviously, dragons.sort(reverse=True) was earlier, since you can’t sort a list of strings after inserting an integer number to it. Here are all changes made into a list:
+
+['Rudror', 'Targiss', 'Coporth']
+dragons.sort(reverse=True)
+['Targiss', 'Rudror', 'Coporth']
+dragons.insert(2, -10)
+['Targiss', 'Rudror', -10, 'Coporth']
+dragons.reverse()
+['Coporth', -10, 'Rudror', 'Targiss']
+'''
+
+'''
+Operations with list → Shopping list 
+
+Ruth goes shopping today, so she is busy making a shopping list.
+
+She wrote down things that she would like to buy at the grocery store: first "milk", then "olive oil" and "bananas". When sneaking a look at the fridge, she noticed that there was some milk left and changed her mind about buying a new one. It got crossed out of the list. And, like a cherry on top, a "brownie" became the last item Ruth had put on the list.
+
+Now you try to replicate these operations on the variable shopping_list.
+
+You are NOT supposed to print the results.
+'''
+# work with this variable
+shopping_list = []
+
+shopping_list.append("milk")
+# put the rest of list operations below
+shopping_list.append("olive oil")
+shopping_list.append("bananas")
+shopping_list.remove("milk")
+shopping_list.append("brownie")
+
+'''
+Operations with list → Sort the numbers 
+
+Below you can see a list of strings called numbers. Sort it in the descending order as strings (alphabetically) and print the resulting list.
+'''
+numbers = ["77", "145", "987", "2095", "6", "371", "4999", "81"]
+
+# sort numbers
+numbers.sort(reverse=True)
+print(numbers)
+
+#  Python → Modules and packages → Load module 
+
+'''
+Load module → Capitalize all words 
+
+Write a program that takes a string, capitalizes all words in it and then prints the result. Use capwords function from the string module.
+
+The string is already defined.
+
+Sample Input 1:
+
+a aaaa aaaaaaaa
+
+Sample Output 1:
+
+A Aaaa Aaaaaaaa
+'''
+# place `import` statement at top of the program
+import string
+
+# don't modify this code or the variable may not be available
+input_string = input()
+
+# use capwords() here
+print(string.capwords(input_string))
+
+'''
+# Load module → Calculating the factorial 
+
+Import factorial function from math module and print the value of the factorial of x.
+
+Sample Input 1:
+
+5
+
+Sample Output 1:
+
+120
+'''
+# place `import` statement at top of the program
+from math import factorial
+
+# don't modify this code or variable `x` may not be available
+x = int(input())
+
+# use factorial() here
+print(factorial(x))
+
+'''
+Load module → E ** x minus one 
+
+Write a program that takes an integer number x and prints e (a mathematical constant) raised to power x minus one. Use the function expm1 defined in the math module.
+
+The variable x is already defined.
+
+Sample Input 1:
+
+91
+
+Sample Output 1:
+
+3.317400098335743e+39
+'''
+# place `import` statement at top of the program
+from math import expm1
+
+# don't modify this code or variable `x` may not be available
+x = int(input())
+
+# use expm1() here
+print(expm1(x))
+
+'''
+Load module → Working with strings 
+
+Print the values of digits and ascii_lowercase from string module on separate lines.
+'''
+# put your code here
+import string
+
+print(string.digits)
+print(string.ascii_lowercase)
+
+'''
+Load module → Not exactly random 
+
+Numbers, generated by functions provided in random module, are not exactly random – they use random number generator based on some number (by default, on the current system time). You can also set this number with the seed function – and all numerical sequences generated after that will be the same.
+
+Write a program that takes an integer number n, sets a random number generator to that number and then prints a pseudo-random number from -100 to 100.
+
+Use seed and randint functions. The former takes one argument and the latter takes two numbers that represent the range.
+
+The variable n is already defined.
+
+Sample Input 1:
+
+36
+
+Sample Output 1:
+
+-16
+'''
+# place `import` statement at top of the program
+import random
+
+# don't modify this code or variable `n` may not be available
+n = int(input())
+
+# put your code here
+random.seed(n)
+print(random.randint(-100, 100))
+
+'''
+Load module → Copysign function 
+
+Write a program that takes two float numbers, x and y, and prints x with the sign of y. Use copysign function defined in the math module.
+
+Variables x and y are already defined.
+
+Sample Input 1:
+
+-68.83573394536573 -66.80342071491599
+
+Sample Output 1:
+
+-68.83573394536573
+'''
+# place `import` statement at top of the program
+from math import copysign
+
+# don't modify this code or the variables may not be available
+x, y = map(float, input().split(' '))
+
+print(copysign(x, y))
+
+#  Python → Math → Random module 
+
+'''
+Random module → The dice game 
+
+It's impossible not to know the dice game. Please, write a program that will imitate a roll of one dice with the help of an appropriate random function.
+
+Thus, your task is just to generate one integer and print it.
+
+The module random has been imported for you.
+'''
+# The `random` module has been imported.
+# Use a function from it in the next line
+print(random.randint(1, 6))
+
+'''
+Random module → From 0 to 1 
+
+The function used to set a starting point of the random search algorithm is called random.seed() and takes a single integer number. Write a program that takes an integer number n, sets a seed to n and then prints a pseudo-random number from 0 to 1.
+
+The variable n is already defined.
+
+Sample Input 1:
+
+-38
+
+Sample Output 1:
+
+0.6394736947203203
+'''
+import random
+# work with this variable
+n = int(input())
+random.seed(n)
+print(random.uniform(0, 1))
+
+'''
+Random module → Yoda style 
+
+Everybody wants to speak like master Yoda sometimes. Let's try to implement a program that will help us with it. 
+
+First, we turn the string of words into a list using the string.split() method.
+
+Then use the function random.seed(43) and rearrange the obtained sequence.
+
+To turn the list back into a string, use ' '.join(list). 
+
+Print the message in the end.
+
+Note: you have to use random.seed(43) in this task!
+
+Sample Input 1:
+
+Luke, I'm your father
+
+Sample Output 1:
+
+your father I'm Luke,
+
+Sample Input 2:
+
+I will be back
+
+Sample Output 2:
+
+be back will I
+'''
+import random
+
+# your sentence is assigned to the variable
+sentence = input().split()
+
+# write your python code below
+random.seed(43)
+random.shuffle(sentence)
+
+# shows the message
+print(' '.join(sentence))
+
+
+'''
+Random module → Voldemort 
+
+The function used to set a starting point of the random search algorithm is called random.seed() and takes a single integer number. Write a program that takes a single number n, sets a seed to n and then prints a pseudo-randomly chosen letter from the string "Voldemort".
+
+The variable n is already defined.
+'''
+import random
+# work with this variable
+n = int(input())
+random.seed(n)
+print(random.choice("Voldemort"))
+
+'''
+Random module → Beta distribution 
+
+Python is widely used for mathematical purposes. Calculate the beta distribution where alpha=0.9 and beta=0.1.
+
+Print your results.
+'''
+import random
+random.seed(3)
+# call the function here
+print(random.betavariate(alpha=0.9, beta=0.1))
+
+#  Python → Data types and operations → String formatting 
+
+'''
+String formatting → Beautify both output and code 
+
+The output should be user-friendly, but the code part is also important. Well-structured and readable code is very important for being a good programmer. Now it's up to you to decide, which formatting method to choose.
+
+Imagine you need to compose a dynamic URL for every certain user with user-specific details. Suppose, you want to send different URLs for every user, depending on their name and profession. The base would be something like
+
+"http://example.com/*nickname*/desirable/*profession*/profile", where nickname and profession are prompts from a user and are dynamic.
+
+Prompt a user for their nickname and profession and print a user-specific URL. Don't bother about any rules of composing the URLs and just use raw input to accomplish the task.
+
+Sample Input 1:
+
+raybeam
+cereal-killer
+
+Sample Output 1:
+
+http://example.com/raybeam/desirable/cereal-killer/profile
+
+Sample Input 2:
+
+AnnMelon
+bodybuilder
+
+Sample Output 2:
+
+http://example.com/AnnMelon/desirable/bodybuilder/profile
+'''
+nickname = input()
+profession = input()
+
+print("http://example.com/{0}/desirable/{1}/profile".format(nickname, profession))
+
+'''
+String formatting → How long is that word? 
+
+Write a program that calculates the length of the word from the input and prints it out together with the word in the format word has N letters. 
+
+Sample Input 1:
+
+serendipity
+
+Sample Output 1:
+
+serendipity has 11 letters
+'''
+word = input()
+print("{0} has {1} letters".format(word, len(word)))
+
+'''
+String formatting → Decimal places 
+
+Round the number from input to the required number of decimals.
+
+The input format:
+
+Two lines: the first with a floating-point number, the second with an integer representing the decimal count.
+
+The output format:
+
+The rounded number.
+
+Do NOT forget to convert the input numbers and to enclose each value in {} in a formatted string.
+
+Sample Input 1:
+
+2.71828
+3
+
+Sample Output 1:
+
+2.718
+'''
+num = float(input())
+place = int(input())
+
+print(f'{num:.{place}f}')
+
+'''
+String formatting → Round pi 
+
+Write a code that rounds the number pi to 5 decimal places and prints it out.
+
+We've defined the variable pi for you.
+'''
+pi = 3.141592653589793
+print(f'{pi:.5f}')
+
+'''
+String formatting → Film 
+
+Write a program that gets information about a movie from the input and presents in the following format:
+
+movie (dir. director) came out in year
+
+The input format:
+
+3 lines: first the title of the movie, then the name of the director and then the year of its release.
+
+Sample Input 1:
+
+Fight Club
+David Fincher
+1999
+
+Sample Output 1:
+
+Fight Club (dir. David Fincher) came out in 1999
+'''
+movie = input()
+director = input()
+year = input()
+print(f"{movie} (dir. {director}) came out in {year}".format(movie, director, year))
+
+'''
+String formatting → Tax brackets 
+
+n progressive tax systems, tax rates change according to the income. Tax brackets are divisions that regulate those changes. 
+
+Here's an example of tax brackets in a certain tax system:
+
+0 — 15,527: 0% tax
+
+15,528 — 42,707: 15% tax
+
+42,708 — 85,414: 22% tax
+
+85,415 — 132,406: 26% tax
+
+132,407 and more: 28% tax
+
+Suppose we use a simplified version of taxation and apply one tax rate to the entire amount of money.
+
+Write a program that calculates the tax that a person's going to pay based on their income.
+
+The input format:
+
+The value of someone's taxable income (in dollars).
+
+The output format:
+
+The tax for {income} is {percent}%. That is {calculated_tax} dollars!
+
+The calculated_tax should always have 2 decimal places.
+
+Sample Input 1:
+
+14378
+
+Sample Output 1:
+
+The tax for 14378 is 0%. That is 0.00 dollars!
+
+Sample Input 2:
+
+99999
+
+Sample Output 2:
+
+The tax for 99999 is 26%. That is 25999.74 dollars!
+'''
+income = int(input())
+percent = 0
+if 0 <= income <= 15527:
+    percent = 0
+elif 15528 <= income <= 41707:
+    percent = 15
+elif 42708 <= income <= 85414:
+    percent = 22
+elif 85415 <= income <= 132406:
+    percent = 26
+else:
+    percent = 28
+
+calculated_tax = income * (percent / 100)
+print(f'The tax for {income} is {percent}%. That is {calculated_tax:.2f} dollars!')
+
+#  Python → Data types and operations → Basic string methods 
+
+'''
+Basic string methods → Markdown parsing 
+
+Markdown syntax is used to format a text. There are several ways to emphasize it using Markdown:
+Typeface    Example
+Italic text     *italics*, _same italics_
+Bold text   **bold**, __same bold__
+Strikethrough text  ~~crossed out~~
+Code snippet    `code`
+
+Read an input and parse the text so that it doesn't include special symbols mentioned in the table "*_~`" at its beginning and its end.
+
+Do not forget to print the result.
+
+Sample Input 1:
+
+**Important info**
+
+Sample Output 1:
+
+Important info
+
+Sample Input 2:
+
+~~hidden ~ tilde~~
+
+Sample Output 2:
+
+hidden ~ tilde
+'''
+markdown = input()
+print(markdown.lstrip("*_~`").rstrip("*_~`"))
+
+'''
+Basic string methods → Preprocessing 
+
+Preprocess an input text:
+
+    delete punctuation symbols (commas, periods, exclamation and question marks ,.!?),
+    convert all symbols to lowercase.
+
+Then print your text.
+
+Punctuation marks appear not only at the end of the input string, so you have to figure out how to get rid of all of them.
+
+Sample Input 1:
+
+Nobody expects the Spanish inquisition!
+
+Sample Output 1:
+
+nobody expects the spanish inquisition
+'''
+input_text = input()
+input_text = input_text.replace(",", "")
+input_text = input_text.replace(".", "")
+input_text = input_text.replace("!", "")
+input_text = input_text.replace("?", "")
+input_text = input_text.lower()
+print(input_text)
+
+'''
+Basic string methods → Poster artist 
+
+Imagine that you design film posters for a living. Write a program that prints each film title in all caps.
+
+Sample Input 1:
+
+the lion king
+
+Sample Output 1:
+
+THE LION KING
+
+Sample Input 2:
+
+MaTRiX
+
+Sample Output 2:
+
+MATRIX
+'''
+print(input().upper())
+
+#  Python → Collections → Set 
+
+'''
+Set → Letters 
+
+Write a program that calculates how many unique letters the input word has. The word is stored in the variable word. Print out the result you'll get.
+
+Sample Input 1:
+
+mississippi
+
+Sample Output 1:
+
+4
+'''
+word = input()  # the input word
+print(len(set(word)))
+
+'''
+Set → Mystery set 
+
+There is an unknown set of objects named mystery_set which has been defined beforehand. You don't have access to this set.
+
+Write a program that deletes the input string (stored in the variable string) from the mystery_set. It is NOT guaranteed that the string is an element of the mystery_set to begin with. Don't forget to take that into account!
+
+Don't print anything!
+'''
+# mystery_set has been defined
+string = input()
+
+# delete string from mystery_set
+mystery_set.discard(string)
+
+'''
+Set → Memory test 
+
+Today you are assisting in a psychological experiment. To test a short-term memory, a researcher gives a set of numbers to each volunteer and asks to repeat all of them in any order. Repeats are allowed in the answer, but not the numbers not mentioned earlier.
+
+The input has been read into two variables for you.
+
+If the volunteer remembers the numbers correctly, print True, otherwise, you should output False.
+
+Sample Input 1:
+
+1 2 3 4 5
+5 4 1 2 1 3
+
+Sample Output 1:
+
+True
+
+Sample Input 2:
+
+999 1 1001 15 6 7
+1 6 7 1 999
+
+Sample Output 2:
+
+False
+
+Sample Input 3:
+
+3 4 5 7
+3 4 5 6 7
+
+Sample Output 3:
+
+False
+'''
+numbers = input().split()
+answers = input().split()
+
+print(set(numbers) == set(answers))
+
+'''
+Set → Counting unique 
+
+Imagine you have information about the three students: which subjects they study. It could be in the following format:
+
+Belov = ["Physics", "Math", "Russian"]
+Smith = ["Math", "Geometry", "English"]
+Sarada = ["Japanese", "Math", "Physics"]
+
+The subjects can be the same or differ. Your task is to find the amount of unique subjects.
+
+ 
+
+NB! Don't write the prompting code. In this task you're given the variables to work: Belov, Smith, and Sarada.
+
+Sample Input 1:
+
+{"Belov": ["Physics", "Math", "Russian"], "Smith": ["Math", "Geometry", "English"], "Sarada": ["Japanese", "Math", "Physics"]}
+
+Sample Output 1:
+
+6
+'''
+# please, work with the variables 'Belov', 'Smith', and 'Sarada'
+unique_subjects = set()
+for i in range(0, len(Belov)):
+    unique_subjects.add(Belov[i])
+for i in range(0, len(Smith)):
+    unique_subjects.add(Smith[i])
+for i in range(0, len(Sarada)):
+    unique_subjects.add(Sarada[i])
+    
+print(len(unique_subjects))
+
+#  Python → Control flow statements → For loop 
+
+'''
+For loop → A mean of n 
+
+Write a program that reads an integer number n. This is a number of integer values you will receive on the next n lines. Your program should compute their mean value.
+
+Print the mean as a float number.
+
+Sample Input 1:
+
+8
+5
+-7
+6
+2
+5
+5
+-7
+-10
+
+Sample Output 1:
+
+-0.125
+'''
+n = int(input())
+total = 0
+
+for i in range(0, n):
+    total += int(input())
+
+print(total / n)
+
+'''
+For loop → Speech generation 
+
+Here is your chance to write instructions for a text-to-speech system. Let's focus on reading phone numbers aloud. The input phone number will consist solely of digits. Print the name of each digit on a new line for the system to read them one by one.
+
+You can store the digit names in a container, e.g. in a list with the names from 0 to 9 digits = ['zero', 'one', 'two', ..., 'nine'], and refer to each digit by index, digits[2] equals to 'two', etc. Mind the type, an index should be an interger, not a string.
+
+Sample Input 1:
+
+4901825
+
+Sample Output 1:
+
+four
+nine
+zero
+one
+eight
+two
+five
+'''
+number = input()
+digits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+
+for char in number:
+    print(digits[int(char)])
+
+'''
+For loop → Lucky 7 
+
+Find all numbers that can be divided by 7 and print their squares.
+
+The input format:
+
+In the first line, there's an integer number of values n.
+
+Then you'll receive n lines with one number on each.
+
+The output format:
+
+m lines with the squares of all numbers that can be divided by 7.
+
+Sample Input 1:
+
+5
+8
+11
+-49
+0
+3564 
+
+Sample Output 1:
+
+2401
+0
+'''
+n = int(input())
+for _i in range(0, n):
+    x = int(input())
+    if x % 7 == 0:
+        print(x * x)
+
+'''
+For loop → Arithmetic mean 
+
+Calculate the arithmetic mean of a list. The arithmetic mean is a sum of all elements divided by their total number.
+
+Elements are given in the list numbers. Find their sum, divide it by the number of elements and then print the result.
+
+Sample Input 1:
+
+10 15 1 6 3
+
+Sample Output 1:
+
+7.0
+'''
+numbers = [int(x) for x in input().split()]
+total = 0
+for i in numbers:
+    total += i
+print(total / len(numbers))
+
+'''
+For loop → The average of all numbers 
+
+Write the code that reads 2 numbers from the keyboard, a and b. As an output, it shows the average of all numbers that lie on the interval between a and b, and can be divided by 3. 
+
+What does it mean? In the example, you are to calculate the average of the numbers in the range [−5;12] [-5; 12] [−5;12]
+
+The numbers divided by 3 without the remainder are: −3,0,3,6,9,12 -3, 0, 3, 6, 9, 12 −3,0,3,6,9,12. There are six of them, and the average is 4.5.
+
+The input interval always contains at least one dividend of 3. Remember to include the values of a and b in your calculations.
+
+Sample Input 1:
+
+-5
+12
+
+Sample Output 1:
+
+4.5
+'''
+# put your python code here
+a = int(input())
+b = int(input())
+total = 0
+counter = 0
+for i in range(a, b + 1):
+    if i % 3 == 0:
+        total += i
+        counter += 1
+print(total / counter)
+
+'''
+For loop → Vowel count 
+
+Have a look at the program that iterates through string and counts vowels in it. Fill in the blank to make it work.
+'''
+string = "red yellow fox bite orange goose beeeeeeeeeeep"
+vowels = 'aeiou'
+count = 0
+
+# fix this for loop
+for letter in string:
+    if letter in vowels:
+        count += 1
+
+'''
+For loop → FizzBuzz 
+
+FizzBuzz is a famous code challenge used in interviews to test basic programming skills. It's time to write your own implementation.
+
+Print numbers from 1 to 100 inclusively following these instructions:
+
+    if a number is multiple of 3, print "Fizz" instead of this number
+    if a number is multiple of 5, print "Buzz" instead of this number
+    for numbers that are multiples of both 3 and 5, print "FizzBuzz"
+    print the rest of the numbers unchanged.
+
+Output each value on a separate line.
+'''
+for i in range(1, 101):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
