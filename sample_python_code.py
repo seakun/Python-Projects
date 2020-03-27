@@ -3521,3 +3521,391 @@ for i in range(1, 101):
         print("Buzz")
     else:
         print(i)
+
+# Python → Control flow statements → Loop control statements
+
+'''
+Loop control statements → Small scale
+
+Read lines with floats from the input until you get a single period . that signals you to stop.
+
+Find the minimum of these numbers and print it out.
+
+Sample Input 1:
+
+11.1
+2.05
+4.0
+.
+Sample Output 1:
+
+2.05
+'''
+num_list = []
+user_input = input()
+while user_input != ".":
+    num_list.append(float(user_input))
+    user_input = input()
+print(min(num_list))
+
+'''
+Loop control statements → Count up the squares
+
+Write a program that reads from the console numbers (one in a line) until their sum is equal to 0. Immediately after that, it should display the sum of the squares of all the entered numbers.
+
+It is guaranteed that at some point the sum of the entered numbers will be equal to 0. After that, reading is not necessary to continue.
+
+In case the first integer equals to 0, also stop reading values from the input. Print out 0 instead of the sum of the squares.
+
+For example, we are reading the numbers 1, -3, 5, -6, -10, 13. At this point, we have noticed that the sum of these numbers is 0 and output the sum of their squares, not paying attention to the fact that there are still unread values.
+
+Sample Input 1:
+
+1
+-3
+5
+-6
+-10
+13
+4
+-8
+Sample Output 1:
+
+340
+'''
+# put your python code here
+user_input = int(input())
+_sum = user_input
+squared_sum = user_input * user_input
+
+while _sum != 0:
+    user_input = int(input())
+    _sum += user_input
+    squared_sum += user_input * user_input
+print(squared_sum)
+
+'''
+Loop control statements → Prime number
+
+Determine whether the input number is a prime number.
+
+The output options:
+
+This number is prime
+
+This number is not prime
+
+Sample Input 1:
+
+6
+Sample Output 1:
+
+This number is not prime
+'''
+user_input = int(input())
+is_prime = True
+
+for i in range(2, user_input):
+    if user_input % i == 0:
+        is_prime = False
+        break
+
+if is_prime:
+    print("This number is prime")
+else:
+    print("This number is not prime")
+
+'''
+Loop control statements → Process integer input
+
+Write a program that reads integers from the console, one number per line.
+
+For each input number you should check:
+
+if the number is less than 10, then skip this number;
+if the number is greater than 100, then stop reading numbers from the console;
+in other cases, print this number back to the console on a separate line.
+Sample Input 1:
+
+12
+4
+2
+58
+112
+Sample Output 1:
+
+12
+58
+Sample Input 2:
+
+101
+Sample Output 2:
+
+Sample Input 3:
+
+1
+2
+102
+Sample Output 3:
+
+'''
+# put your python code here
+user_input = int(input())
+
+while user_input:
+    if user_input > 100:
+        break
+    if user_input >= 10:
+        print(user_input)
+    user_input = int(input())
+'''
+Loop control statements → Palindrome
+
+Palindrome is a word or a text that reads the same backward as forward. Create a program that checks if the word is palindrome.
+
+The input format:
+
+Word that needs to be checked. It is guaranteed that the word will be of even length.
+
+The output format:
+
+If the word is palindrome, write Palindrome. Otherwise, write Not palindrome
+
+Sample Input 1:
+
+noon
+Sample Output 1:
+
+Palindrome
+Sample Input 2:
+
+banana
+Sample Output 2:
+
+Not palindrome
+'''
+# put your python code here
+user_input = input()
+is_palindrome = True
+for i in range(len(user_input) // 2):
+    if user_input[i] != user_input[len(user_input) - 1 - i]:
+        is_palindrome = False
+        break
+if is_palindrome:
+    print("Palindrome")
+else:
+    print("Not palindrome")
+
+'''
+Loop control statements → Vowels and consonants
+
+You'll get a sequence of characters (a word, a sentence or just gibberish). For each character tell if it's a vowel or a consonant. If you hit a non-alphabetic symbol, just stop processing.
+
+The input format:
+
+One line with N characters. Alphabetic symbols will be from English alphabet.
+
+The output format:
+
+Print "vowel" if the character is a vowel, and "consonant" if the character is consonant. Stop printing information at the first non-alphabetic symbol.
+
+Sample Input 1:
+
+somegibberish
+Sample Output 1:
+
+consonant
+vowel
+consonant
+vowel
+consonant
+vowel
+consonant
+consonant
+vowel
+consonant
+vowel
+consonant
+consonant
+Sample Input 2:
+
+normal phrase
+Sample Output 2:
+
+consonant
+vowel
+consonant
+consonant
+vowel
+consonant
+Sample Input 3:
+
+weusedtowritewithnospaces
+Sample Output 3:
+
+consonant
+vowel
+vowel
+consonant
+vowel
+consonant
+consonant
+vowel
+consonant
+consonant
+vowel
+consonant
+vowel
+consonant
+vowel
+consonant
+consonant
+consonant
+vowel
+consonant
+consonant
+vowel
+consonant
+vowel
+consonant
+'''
+user_input = input()
+vowel = "aeiou"
+consonant = "bcdfghjklmnpqrstvwxyz"
+
+for char in user_input:
+    if char in vowel:
+        print("vowel")
+    elif char in consonant:
+        print("consonant")
+    else:
+        break
+
+'''
+Loop control statements → Game over
+
+In online test games, there is usually a limited number of lives: if, for example, you make 3 mistakes, you lose and do not continue with the game. Imagine you are trying to implement that system to an existing online test that doesn't have it yet.
+
+The input format:
+
+A line with N scores of a user in a test game separated by a space: C for the correct answer and I for the incorrect answer. N will be between 15 and 50.
+
+The output format:
+
+If the user loses the game, print "Game over" and their score (how many correct answers they gave). If the user wins, print "You won"  and their score. The message should be printed without quotation marks. The message and the score should be printed on separate lines.
+
+Sample Input 1:
+
+C C C I C C C C I I C C C C C C C C C
+Sample Output 1:
+
+Game over
+7
+Sample Input 2:
+
+C C I I C C C C C C C C C C C
+Sample Output 2:
+
+You won
+13
+'''
+scores = input().split()
+# put your python code here
+correct_score = 0
+incorrect_score = 0
+for score in scores:
+    if incorrect_score == 3:
+        break
+    if score == "C":
+        correct_score += 1
+    if score == "I":
+        incorrect_score += 1
+if incorrect_score == 3:
+    print("Game over")
+else:
+    print("You won")
+print(correct_score)
+
+'''
+Loop control statements → Party time
+
+James is hosting a party today. He decided to welcome all new guests personally. To remember their names, James kindly asks you to write them in a list. Read the names from the input, each on a new line, and stop at a single period . that denotes the end of the sequence.
+
+Print your list and its length (the number of guests) for James.
+
+Sample Input 1:
+
+Katja
+Adam
+Eva
+Nicholas
+.
+Sample Output 1:
+
+['Katja', 'Adam', 'Eva', 'Nicholas']
+4
+'''
+user_input = input()
+names_list = []
+while user_input != ".":
+    names_list.append(user_input)
+    user_input = input()
+print(names_list)
+print(len(names_list))
+
+'''
+Loop control statements → The mean
+
+Calculate the arithmetic mean of integer numbers. You will receive the integers on separate lines. The numeric sequence ends with a period ., so stop reading the input on it.
+
+There will always be at least one number.
+'''
+user_input = input()
+names_list = []
+while user_input != ".":
+    names_list.append(int(user_input))
+    user_input = input()
+print(sum(names_list) / len(names_list))
+
+'''
+Loop control statements → Cat cafés
+
+Kitty wants to visit a cat café! Help her find the one with the largest number of cats.
+
+Input format
+
+Each string contains a café's name followed by a space and the number of cats in it, e.g. Paws 11, Kittens 9.
+
+The names would be one-word only. Read input lines until you get a string MEOW (without any number).
+
+Output format
+
+The café with the maximum number of cats.
+
+Hint
+
+Sample Input 1:
+
+Paws 11
+Kittens 9
+MEOW
+Sample Output 1:
+
+Paws
+'''
+user_input = input()
+cafe_list = {}
+nums_list = []
+cafe = ""
+num_of_cats = 0
+
+while user_input != "MEOW":
+    cafe = user_input.split()[0]
+    num_of_cats = int(user_input.split()[1])
+    nums_list.append(num_of_cats)
+    cafe_list.update({num_of_cats: cafe})
+    user_input = input()
+
+print(cafe_list.get(max(nums_list)))
+
+
