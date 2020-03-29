@@ -3909,3 +3909,58 @@ while user_input != "MEOW":
 print(cafe_list.get(max(nums_list)))
 
 
+#  Python → Simple programs → Errors 
+
+'''
+Errors → Chaos 
+
+Look at the code below and eliminate the chaos: the first line should print the resulting number of the calculation and the second line should print the word mathematics.
+'''
+print(45 / 9 + 16 * (5 + 8))
+print("mathematics")
+
+'''
+Errors → English contractions 
+
+Lucy is drawing a poster with English contractions for her students. We will join her English club and help with learning materials.
+
+Print the following strings with contractions:
+I am = I'm
+I have = I've
+I will = I'll
+I had / would = I'd
+
+Each string should be on a new line. This will be easy if you use quotes wisely.
+'''
+print("I am = I'm")
+print("I have = I've")
+print("I will = I'll")
+print("I had / would = I'd")
+
+'''
+Errors → Visual poetry 
+
+Just look at this piece of poetry in the shape of an egg! Try to run this code without errors.
+
+Please do NOT edit the strings within print().
+'''
+print("      *  *  *     ")
+print("    *         *   ")
+print("  *    Which   *  ")
+print(" *  came first: * ")
+print("*  the  chicken  *")
+print(" *   or   the   * ")
+print(" *   egg?   *")
+print("     *  *  *     ")
+
+'''
+Errors → Locate a problem 
+
+The code snippet below needs debugging. Examine it and write down the line number on which the compilation of code will stop.
+
+print( "The quick brown fox" )  # 1
+print()                         # 2
+print'jumps')                   # 3
+pint()                          # 4
+print( ' over the lazy dog  )   # 5
+'''
