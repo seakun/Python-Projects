@@ -4127,3 +4127,92 @@ str_3 = input()
 nest_nest_list = [str_1, [str_2], [[str_3]]]
 print(nest_nest_list)
 
+# Python → Data types and operations → Type casting
+
+'''
+Type casting → Exactly 100 times
+
+Jane knows that variable n stores some integer number (for example, 12345) and wants to print it exactly 100 times. Help her and write down a single line of code that will print number n exactly 100 times.
+'''
+n = 12345
+# put your python code here
+print(str(n) * 100)
+
+'''
+Type casting → Lexical reduplication
+
+The languages of the world are amazing! Programming languages too, but now we will talk about the human ones. In linguistics, repeating a word or part of it is called reduplication. This morphological phenomenon is found in different languages. Think for a second, and you will definitely come up with a couple of examples. Just to name a few: knock-knock, so-so, bye-bye.
+
+We have a full reduplication here since the entire word is repeated. That's the mechanism we want you to implement. Print a word exactly 2 times. The spelling rules vary across the globe, so do not separate the halves (that will be easy!).
+
+Sample Input 1:
+
+maru
+Sample Output 1:
+
+marumaru
+Sample Input 2:
+
+piga
+Sample Output 2:
+
+pigapiga
+Sample Input 3:
+
+knock
+Sample Output 3:
+
+knockknock
+'''
+word = input()
+
+# Change the next line
+print(word * 2)
+
+# Theory: Escape sequences 
+
+'''
+Escape sequences → Find the length 
+
+Write a program that will print the length of the string 'That is \n mine'.
+'''
+print(len('That is \n mine'))
+
+'''
+Escape sequences → Good programmer 
+
+You are really good at what you do (programming), so your colleague has decided to congratulate you on the completed project with a message "You are the best programmer!". But how to do this?
+
+Write the code that prints this message using an escape sequence so that each word of the sentence would be on a new line.
+
+Omit the trailing spaces, we can do without them!
+'''
+print("You\nare\nthe\nbest\nprogrammer!")
+
+'''
+Escape sequences → Print a sign 
+
+Print two backslash characters \\.
+'''
+# put your python code here
+print("\\\\")
+
+#  Python → Functions → Scopes 
+
+''' 
+Scopes → Cities 
+
+Imagine you've created a program that plays the cities game with a user. For the game to work, you need to remember the user's city and be able to change it. Below is the code that does that, but there's a mistake in it. Find it and fix it!
+'''
+user_city = "Istanbul"
+
+def change_city(new_user_city):
+    global user_city
+    user_city = new_user_city
+
+change_city("Paris")
+print(user_city)
+
+'''
+
+'''
