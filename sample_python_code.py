@@ -3964,3 +3964,166 @@ print'jumps')                   # 3
 pint()                          # 4
 print( ' over the lazy dog  )   # 5
 '''
+# Python → Collections → List comprehension
+
+'''
+List comprehension → Vowels
+
+Read a string from the input and print a list of vowels that belong to that string.
+
+All vowels are enlisted in a variable of the same name.
+
+Sample Input 1:
+
+invertebrate
+Sample Output 1:
+
+['i', 'e', 'e', 'a', 'e']
+'''
+vowels = 'aeiou'
+# create your list here
+user_input = input()
+print([i for i in user_input if i in vowels])
+
+'''
+List comprehension → Even numbers
+
+Write a program that takes a list of numbers, creates another list of even numbers from the first list, and prints it.
+
+E.g. if my_numbers = [1, 2, 3, 4, 5], then your ptogram should return the list [2, 4].
+
+NB: the list with numbers my_numbers is already defined, so you don't have to work with the input.
+'''
+# work with the variable 'my_numbers'
+print([i for i in my_numbers if i % 2 == 0])
+
+'''
+List comprehension → A list of words
+
+Write a program that takes a list with words, creates a new list of words that start with the letter "a" in the first list, and prints it.
+
+Some words may begin with the capital A! Leave them in their original form in the resulting list.
+
+E.g. if words = ['apple', 'pear', 'banana', 'Ananas'], then your program should return the list ['apple', 'Ananas'].
+
+The list with words is already defined: you can access it using the variable words.
+'''
+# work with the preset variable `words`
+print([x for x in words if x.startswith('a') or x.startswith('A')])
+
+'''
+List comprehension → How many days?
+
+The list seconds is a list of numbers that represent seconds. Convert the number of seconds to full days and print the list that contains these values. The number of full days should be an int value.
+'''
+seconds = [86400, 3600, 1028397, 8372891, 219983, 865779330, 3276993204380912]
+# create a list of days here
+days = [x // 86400 for x in seconds]
+print(days)
+
+'''
+List comprehension → Length
+
+Given a list of words in the code below, create a list of lengths of those words and print it.
+'''
+words = ["apple", "it", "creek", "pelican", "subsequent", "horse",
+         "apothecary"]
+print([len(w) for w in words])
+
+'''
+List comprehension → Plus one
+
+You are given a list of strings containing integer numbers. Print the list of their values increased by 1.
+
+E.g. if list_of_strings = ["36", "45", "99"], your program should print the list [37, 46, 100].
+
+The variable list_of_strings is already defined, you don't need to work with the input.
+'''
+# please work with the variable 'list_of_strings'
+print([int(x) + 1 for x in list_of_strings])
+
+# Python → Collections → Nested lists
+
+'''
+Nested lists → Fill the blanks
+
+Below you can see the code that chooses some elements from one list and appends them to another:
+
+for a in x:
+    for el in a:
+        if el > 0:
+            els.append(el)
+Fill in the blanks in the code below so that list comprehension produces the same result as the code above.
+'''
+els = [el for a in x for el in a if el > 0]
+
+'''
+Nested lists → A lot of nested lists
+
+How to create a nested list [[1, 2], [1, 2], [1, 2], [1, 2], [1, 2]] in one line?
+'''
+my_list = [[x for x in range(1, 3)] for y in range(5)]
+print(my_list)
+
+'''
+Nested lists → Accessing elements of a matrix
+
+Let's say we have a matrix M:
+
+M = [[34, 77, 8,  45], 
+     [80, 15, 23, 57], 
+     [92, 86, 19, 38]]
+How to print the element in the first column and the third row?
+'''
+# the variable M is already defined
+print(M[2][0])
+
+'''
+Nested lists → Conditions & nested lists
+
+This is a list of students and their grades for an exam: 
+
+students = [["Will", "B"], ["Kate", "B"], ["Max", "A"], ["Elsa", "C"], ["Alex", "B"], ["Chris", "A"]]
+Select only students with the best grade ("A") and print their names in a list. Do all this in one line.
+'''
+# the list "students" is already defined
+print([s[0] for s in students if s[1] == "A"])
+
+'''
+Nested lists → Word list
+
+Create a list of words from the text below that are shorter than or equal to the input value. Print the new list.
+
+Sample Input 1:
+
+1
+Sample Output 1:
+
+['a', 'a']
+'''
+text = [["Glitch", "is", "a", "minor", "problem", "that", "causes", "a", "temporary", "setback"],
+        ["Ephemeral", "lasts", "one", "day", "only"],
+        ["Accolade", "is", "an", "expression", "of", "praise"]]
+user_input = int(input())
+print([w for words in text for w in words if len(w) <= user_input])
+
+'''
+Nested lists → A very nested list
+
+Write a program that takes three strings as input and then constructs and prints a nested list from them – with first string as a first element, a list containing only second string as a second element and a list containing another list containing a third string as a third element.
+
+Sample Input 1:
+
+cat
+dog
+dragon
+Sample Output 1:
+
+['cat', ['dog'], [['dragon']]]
+'''
+str_1 = input()
+str_2 = input()
+str_3 = input()
+nest_nest_list = [str_1, [str_2], [[str_3]]]
+print(nest_nest_list)
+
