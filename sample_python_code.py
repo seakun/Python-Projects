@@ -4213,6 +4213,256 @@ def change_city(new_user_city):
 change_city("Paris")
 print(user_city)
 
-'''
+# Python → Data types and operations → Split and join
 
 '''
+Split and join → Prepositional genitive
+
+Advanced input() handling is used to read input directly into several variables, for example:
+
+x, y = input().split()
+Use it to print the next message with the two input values: "{x} of {y}"
+
+Sample Input 1:
+
+state Massachusetts
+Sample Output 1:
+
+state of Massachusetts
+Sample Input 2:
+
+Queen Scots
+Sample Output 2:
+
+Queen of Scots
+'''
+x, y = input().split()
+print(x + str(" of ") + y)
+
+'''
+Split and join → Straight A's
+
+Write a program that calculates the proportion of students who received grade A.
+
+A five-point rating system with grades A, B, C, D, F is used.
+
+Input format:
+A string with students' marks separated by space. At least one mark will be present.
+
+Output format:
+A fractional number with exactly two decimal places.
+
+To format the decimal places use the round(number, places) function.
+
+Hint
+
+Sample Input 1:
+
+F B A A B C A D
+Sample Output 1:
+
+0.38
+Sample Input 2:
+
+B C B
+Sample Output 2:
+
+0.0
+Sample Input 3:
+
+A D
+Sample Output 3:
+
+0.5
+'''
+# put your python code here
+grades = input().split()
+total = 0
+a_total = 0
+for i in grades:
+    if i == "A":
+        a_total += 1
+    total += 1
+print(round(a_total / total, 2))
+
+'''
+Split and join → Find positions
+
+Write a program that reads a sequence of numbers from the first line and the number x from the second line. Then it should output all positions of x in the numerical sequence.
+
+The position count starts from 0. In case if x is not in the sequence, print the line "not found" (quotes omitted, lowercased).
+
+Positions should be displayed in one line, in ascending order of the value.
+
+Hint
+
+Sample Input 1:
+
+5 8 2 7 8 8 2 4
+8
+Sample Output 1:
+
+1 4 5
+Sample Input 2:
+
+5 8 2 7 8 8 2 4
+10
+Sample Output 2:
+
+not found
+'''
+# put your python code here
+seq = input().split()
+find = input()
+indexes = []
+counter = 0
+for i in seq:
+    if i == find:
+        indexes.append(str(counter))
+    counter += 1
+if len(indexes) == 0:
+    print("not found")
+else:
+    print(" ".join(indexes))
+
+'''
+Split and join → Spellchecker
+
+Write a spellchecker that tells you which words in the sentence are spelled incorrectly. Use the dictionary in the code below.
+
+The input format:
+
+A sentence. All words are in the lowercase.
+
+The output format:
+
+All incorrectly spelled words in the order of their appearance in the sentence. If all words are spelled correctly, print OK.
+
+Sample Input 1:
+
+srutinize is to examene closely and minutely
+Sample Output 1:
+
+srutinize
+examene
+Sample Input 2:
+
+all correct
+Sample Output 2:
+
+OK
+'''
+
+dictionary = ['all', 'an', 'and', 'as', 'closely', 'correct', 'equivocal',
+              'examine', 'indication', 'is', 'means', 'minutely', 'or', 'scrutinize',
+              'sign', 'the', 'to', 'uncertain']
+seq = input().split()
+incorrect = []
+for word in seq:
+    if word not in dictionary:
+        incorrect.append(word)
+if len(incorrect) == 0:
+    print("OK")
+else:
+    for w in incorrect:
+        print(w)
+
+'''
+Split and join → Find words
+
+Find all words that end in "s" and print them together separated by an underscore. 
+
+Sample Input 1:
+
+First ladies rule the State and state the rule: ladies first
+Sample Output 1:
+
+ladies_ladies
+'''
+seq = input().split()
+to_print = []
+
+for word in seq:
+    if word.endswith("s"):
+        to_print.append(word)
+
+print("_".join(to_print))
+
+'''
+Split and join → String tricks
+
+Examine the code and fix the mistakes so that the join() method works.
+'''
+random_numbers = [1, 22, 333, 4444, 55555]
+str_numbers = [str(n) for n in random_numbers]
+print("\n".join(str_numbers))
+
+'''
+Split and join → Fix the mistakes
+
+The code below is supposed to find all website addresses (https://, http://, www.) in the input text. However, it is not finished and there are several mistakes in the code. Find the mistakes, fix them and return all addresses in the chronological order each on a new line.
+
+Sample Input 1:
+
+WWW.GOOGLE.COM uses 100-percent renewable energy sources and www.ecosia.com plants a tree for every 45 searches!
+Sample Output 1:
+
+WWW.GOOGLE.COM
+www.ecosia.com
+'''
+text = input()
+words = text.split()
+for word in words:
+    # finish the code here
+    if word.lower().startswith("www.") \
+            or word.lower().startswith("https://") \
+            or word.lower().startswith("http://"):
+        print(word)
+
+# Python → Builtins → Any and all
+
+'''
+Any and all → Heads or Tails
+
+We have tossed a coin 6 times and saved the results in a list called heads_or_tails. The values are integers: 1 stands for a head, while 0 denotes a tail.
+
+Add some code to find out whether the list has any heads.
+'''
+# Fingers crossed
+check = any(heads_or_tails)
+
+'''
+Any and all → Lottery
+
+Imagine that you have bought a bunch of lottery tickets and wrote down their numbers into the list. Now, it's time to figure out whether you have a winning ticket.
+
+You know that all winning tickets are no less than 44. Fill the empty fields in the code (these ones ...) to check if you have at least one winning ticket.
+
+You DON'T need to print the answer.
+'''
+# As luck would have it
+tickets = [11, 22, 33, 44, 55]
+winning_tickets = [i >= 44 for i in tickets]
+tickets_bool = any(winning_tickets)
+
+'''
+Any and all → Competition
+
+Today you are taking part in the chess competition. The winner of the competition will get the 'winner' status and the largest amount of money if they win all the games. Much is at stake!
+
+The results are stored in a list. Fill the blanks in the code below and figure out how much money you won.
+
+You DON'T need to print the answer.
+'''
+check = any([True, True, 1, 1, True])
+
+if check:
+    status = 'winner'
+else:
+    status = 'looser'
+
+if status == 'winner':
+    winning_sum = 100
+else:
+    winning_sum = 10
+
