@@ -4466,3 +4466,76 @@ if status == 'winner':
 else:
     winning_sum = 10
 
+# Python → Object-oriented programming → Class
+
+'''
+Class → The Creator
+
+Imagine for a second that you're a God and create a class Human. Humans are a species called "Homo Sapiens" and they (usually) have 2 legs and 2 arms. Create the attributes species, n_legs, and n_arms for your class Human.
+'''
+# create a Human here
+class Human:
+    species = "Homo Sapiens"
+    n_legs = 2
+    n_arms = 2
+
+'''
+Class → The housing problem
+
+The code below defines the class House and an object of that class. However, the code is somewhat incorrect. Fix the mistakes.
+'''
+class House:
+    construction = "building"
+    elevator = True
+
+
+h = House()
+
+'''
+Class → Who is who
+
+There are two classes: Angel and Demon.
+
+They have certain characteristics that help tell them apart. Both of these classes have 3 common class attributes with different values:
+
+class Angel:
+    color = "white"
+    feature = "wings"
+    home = "Heaven"
+        
+        
+class Demon:
+    color = "red"
+    feature = "horns"
+    home = "Hell"
+Suppose there is a mysterious object called mystery_entity. Print its attributes to find out whether this entity is an angel or a demon. You should print the attributes in this order: color, feature, home. Each should be on a separate line.
+'''
+# mystery_entity has already been defined
+# print its class attributes
+print(mystery_entity.color)
+print(mystery_entity.feature)
+print(mystery_entity.home)
+
+'''
+Class → Let's rock
+
+There are many bands in the world that perform all kinds of music. Let's suppose for a second that you're a fan of rock and want to create a program that deals with rock bands.
+
+For that, you obviously need the class RockBand with such attributes as genre ("rock"), n_members(4, by default) and famous_songs (an empty list as a default value). Create this class and an object of that class: name the variable after any rock band that you like. 
+
+You do NOT need to fill the famous_songs attribute, leave the default value.
+
+Print the attributes of your rock band on separate lines in this order: genre, n_members, famous_songs.
+'''
+# start a RockBand here
+class RockBand:
+    genre = "rock"
+    n_members = 4
+    famous_songs = []
+
+r = RockBand()
+print(r.genre)
+print(r.n_members)
+print(r.famous_songs)
+
+
